@@ -1,0 +1,43 @@
+/* 水平间距 */
+/* 水平间距 */
+swiper {
+  height: 350rpx;
+  margin-bottom: 5rpx;
+}
+swiper .swiper-item, swiper image {
+  height: 100%;
+  width: 100%;
+}
+.dianpu-list {
+  height: 400rpx;
+}
+.dianpu {
+  height: 100%;
+  background-color: lightgrey;
+  margin-top: 10rpx;
+  border-radius: 15rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.dian-info {
+  height: 20%;
+  font-size: 48rpx;
+  margin-left: 20rpx;
+  padding-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.dishe-list {
+  display: flex;
+  justify-content: space-around;
+}
+.dishe-list .dish-img {
+  height: 180rpx;
+  width: 180rpx;
+}
+.dishe-list .dish-info-name {
+  text-align: center;
+}
+.dishe-list .dish-info-price {
+  text-align: center;
+  color: orange;
+}

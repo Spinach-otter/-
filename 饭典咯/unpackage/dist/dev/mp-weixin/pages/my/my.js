@@ -5,6 +5,10 @@ const _sfc_main = {
     return {};
   }
 };
+if (!Array) {
+  const _component_my_search = common_vendor.resolveComponent("my-search");
+  _component_my_search();
+}
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {};
 }

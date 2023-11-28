@@ -4,6 +4,20 @@
     "pages/foods/foods",
     "pages/my/my"
   ],
+  "subPackages": [
+    {
+      "root": "subpkg",
+      "pages": [
+        "goods_detail/goods_detail"
+      ]
+    },
+    {
+      "root": "subpkgtwo",
+      "pages": [
+        "goods_list/goods_list"
+      ]
+    }
+  ],
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "饭典咯",

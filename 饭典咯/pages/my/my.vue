@@ -1,6 +1,6 @@
 <template>
 	<view>
-		my
+		<my-search></my-search>
 	</view>
 </template>
 

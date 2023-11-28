@@ -4,7 +4,7 @@
 		"path" : "pages/home/home",
 		"style" : 
 		{
-			"navigationBarTitleText" : "",
+			"navigationBarTitleText" : "饭典咯",
 			"enablePullDownRefresh" : false
 		}
 	},
@@ -12,7 +12,7 @@
 		"path" : "pages/foods/foods",
 		"style" : 
 		{
-			"navigationBarTitleText" : "",
+			"navigationBarTitleText" : "饭典咯",
 			"enablePullDownRefresh" : false
 		}
 	},
@@ -20,10 +20,38 @@
 		"path" : "pages/my/my",
 		"style" : 
 		{
-			"navigationBarTitleText" : "",
+			"navigationBarTitleText" : "饭典咯",
 			"enablePullDownRefresh" : false
 		}
-	}],
+	}
+	],
+	"subPackages": [
+		{
+			"root": "subpkg",
+			"pages": [{
+				"path" : "goods_detail/goods_detail",
+				"style" : 
+				{
+					"navigationBarTitleText" : "",
+					"enablePullDownRefresh" : false
+				}
+			}
+			]
+		},
+		{
+			"root": "subpkgtwo",
+			"pages": [{
+				"path" : "goods_list/goods_list",
+				"style" : 
+				{
+					"navigationBarTitleText" : "",
+					"enablePullDownRefresh" : false
+				}
+			}
+				
+			]
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "饭典咯",
