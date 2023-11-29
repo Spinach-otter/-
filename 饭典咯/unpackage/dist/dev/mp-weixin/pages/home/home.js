@@ -80,22 +80,35 @@ const _sfc_main = {
         }
       ]
     };
+  },
+  methods: {
+    // 跳转到分包中的搜索页面
+    gotoSearch() {
+      common_vendor.index.navigateTo({
+        url: "/subpkgthree/search/search"
+      });
+    }
   }
 };
 if (!Array) {
-  const _component_my_search = common_vendor.resolveComponent("my-search");
-  _component_my_search();
+  const _easycom_my_search2 = common_vendor.resolveComponent("my-search");
+  _easycom_my_search2();
+}
+const _easycom_my_search = () => "../../components/my-search/my-search.js";
+if (!Math) {
+  _easycom_my_search();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
-    a: common_vendor.f($data.swiperList, (item, i, i0) => {
+    a: common_vendor.o($options.gotoSearch),
+    b: common_vendor.f($data.swiperList, (item, i, i0) => {
       return {
         a: item.image_src,
         b: "/subpkg/goods_detail/goods_detail?goods_id=" + item.goods_id,
         c: i
       };
     }),
-    b: common_vendor.f($data.DianList, (item, i, i0) => {
+    c: common_vendor.f($data.DianList, (item, i, i0) => {
       return {
         a: common_vendor.t(item.dian_name),
         b: common_vendor.f(item.dishes, (dish, j, i1) => {

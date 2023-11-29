@@ -9,9 +9,9 @@
     "miniprogram": {
       "list": [
         {
-          "name": "foods",
-          "pathName": "pages/foods/foods",
-          "query": "",
+          "name": "detail",
+          "pathName": "subpkg/goods_detail/goods_detail",
+          "query": "goods_id=6",
           "launchMode": "default",
           "scene": null
         }

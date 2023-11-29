@@ -16,6 +16,12 @@
       "pages": [
         "goods_list/goods_list"
       ]
+    },
+    {
+      "root": "subpkgthree",
+      "pages": [
+        "search/search"
+      ]
     }
   ],
   "window": {

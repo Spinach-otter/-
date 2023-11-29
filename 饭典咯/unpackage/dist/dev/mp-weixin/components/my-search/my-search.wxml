@@ -1,1 +1,1 @@
-<view> hi, </view>
+<view class="my-search-container"><view class="my-search-box" bindtap="{{b}}"><uni-icons wx:if="{{a}}" u-i="12340d4c-0" bind:__l="__l" u-p="{{a}}"></uni-icons><text class="placeholder">搜索</text></view></view>

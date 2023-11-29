@@ -13,7 +13,7 @@ swiper .swiper-item, swiper image {
 }
 .dianpu {
   height: 100%;
-  background-color: lightgrey;
+  background-color: white;
   margin-top: 10rpx;
   border-radius: 15rpx;
   margin-left: 10rpx;
@@ -40,4 +40,10 @@ swiper .swiper-item, swiper image {
 .dishe-list .dish-info-price {
   text-align: center;
   color: orange;
+}
+.search-box {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }

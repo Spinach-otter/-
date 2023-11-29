@@ -1,0 +1,16 @@
+/* 水平间距 */
+/* 水平间距 */
+.uni-searchbar {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 16rpx;
+  /* 将默认的 #FFFFFF 改为 #C00000 */
+  background-color: #c00000;
+}
+.search-box {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
