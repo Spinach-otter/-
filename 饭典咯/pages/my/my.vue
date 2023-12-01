@@ -44,6 +44,15 @@
 	    </view>
 	  </view>
 	</view>
+	
+	<view class="test" v-for="(item,i) in info" :key="i">
+		<view class="test-c">
+			{{item.content}}
+		</view>
+		<view class="test-s">
+			{{item.num}}
+		</view>
+	</view>
   </view>
 </template>
 
@@ -51,8 +60,21 @@
 	export default {
 		data() {
 			return {
-				
+				info:[],
 			};
+		},
+		onLoad() {
+			uni.request({
+				url:'http://localhost:8080/test/',
+				method:'GET',
+				success: (res) => {
+					console.log(res);
+					this.info=res.data;
+				},
+				fail() {
+					console.log("fail connect");
+				}
+			})
 		}
 	}
 </script>
@@ -122,5 +144,15 @@
     font-size: 15px;
     padding: 0 10px;
   }
+}
+
+.test {
+	height: 20px;
+	background-color: aquamarine;
+	display: flex;
+	
+	.test-c {
+		width: 50%;
+	}
 }
 </style>

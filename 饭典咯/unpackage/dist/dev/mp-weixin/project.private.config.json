@@ -5,17 +5,5 @@
     "compileHotReLoad": true,
     "urlCheck": false
   },
-  "condition": {
-    "miniprogram": {
-      "list": [
-        {
-          "name": "detail",
-          "pathName": "subpkg/goods_detail/goods_detail",
-          "query": "goods_id=6",
-          "launchMode": "default",
-          "scene": null
-        }
-      ]
-    }
-  }
+  "condition": {}
 }

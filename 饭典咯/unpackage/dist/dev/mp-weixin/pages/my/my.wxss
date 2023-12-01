@@ -56,3 +56,11 @@
   font-size: 15px;
   padding: 0 10px;
 }
+.test {
+  height: 20px;
+  background-color: aquamarine;
+  display: flex;
+}
+.test .test-c {
+  width: 50%;
+}
