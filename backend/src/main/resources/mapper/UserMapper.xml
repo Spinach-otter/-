@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fandianlo.backend.mapper.UserMapper">
+    <select id="getUserLikesCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) AS LikesCount
+        FROM likes
+        WHERE user_id = (
+            SELECT id
+            FROM user
+            WHERE name = #{username}
+        )
+    </select>
+    <select id="getUserRemarksCount" resultType="java.lang.Integer">
+        SELECT COUNT(*) AS RemarksCount
+        FROM remarks
+        WHERE user_id = (
+            SELECT id
+            FROM user
+            WHERE name = #{username}
+        )
+    </select>
+    <select id="getIdByName" resultType="java.lang.Integer">
+        select id from user where name=#{name}
+    </select>
+</mapper>

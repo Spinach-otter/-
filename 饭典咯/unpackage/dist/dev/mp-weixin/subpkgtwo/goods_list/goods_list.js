@@ -40,7 +40,7 @@ const _sfc_main = {
     // 点击跳转到商品详情页面
     gotoDetail(item) {
       common_vendor.index.navigateTo({
-        url: "/subpkg/goods_detail/goods_detail?goods_id=" + item.goods_id
+        url: "/subpkg/goods_detail/goods_detail?dishesId=" + item.dishesId
       });
     }
   }

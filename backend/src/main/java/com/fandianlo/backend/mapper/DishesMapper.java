@@ -12,4 +12,5 @@ public interface DishesMapper extends BaseMapper<dishes> {
     List<dishes> getDishesByShopId(Integer shopId);
     List<dishes> getDishesByKeyWords(String kw);
 
+
 }

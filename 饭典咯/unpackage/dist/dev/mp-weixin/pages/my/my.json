@@ -2,6 +2,7 @@
   "navigationBarTitleText": "饭典咯",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "uni-icons": "../../uni_modules/uni-icons/components/uni-icons/uni-icons"
+    "my-login": "../../components/my-login/my-login",
+    "my-userinfo": "../../components/my-userinfo/my-userinfo"
   }
 }

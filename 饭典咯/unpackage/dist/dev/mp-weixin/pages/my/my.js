@@ -2,43 +2,23 @@
 const common_vendor = require("../../common/vendor.js");
 const _sfc_main = {
   data() {
-    return {
-      info: []
-    };
-  },
-  onLoad() {
-    common_vendor.index.request({
-      url: "http://localhost:8080/test/",
-      method: "GET",
-      success: (res) => {
-        console.log(res);
-        this.info = res.data;
-      },
-      fail() {
-        console.log("fail connect");
-      }
-    });
+    return {};
   }
 };
 if (!Array) {
-  const _easycom_uni_icons2 = common_vendor.resolveComponent("uni-icons");
-  _easycom_uni_icons2();
+  const _easycom_my_login2 = common_vendor.resolveComponent("my-login");
+  const _easycom_my_userinfo2 = common_vendor.resolveComponent("my-userinfo");
+  (_easycom_my_login2 + _easycom_my_userinfo2)();
 }
-const _easycom_uni_icons = () => "../../uni_modules/uni-icons/components/uni-icons/uni-icons.js";
+const _easycom_my_login = () => "../../components/my-login/my-login.js";
+const _easycom_my_userinfo = () => "../../components/my-userinfo/my-userinfo.js";
 if (!Math) {
-  _easycom_uni_icons();
+  (_easycom_my_login + _easycom_my_userinfo)();
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return {
-    a: common_vendor.p({
-      type: "arrowright",
-      size: "15"
-    }),
-    b: common_vendor.p({
-      type: "arrowright",
-      size: "15"
-    })
-  };
+  return common_vendor.e({
+    a: !this.$store.state.isLoggedIn
+  }, !this.$store.state.isLoggedIn ? {} : {});
 }
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/chenyanling/Desktop/饭典咯/饭典咯/pages/my/my.vue"]]);
 wx.createPage(MiniProgramPage);

@@ -1,36 +1,21 @@
-// store/user.js
+// user.js
 
 const state = {
-  userInfo: null,
-  openid: ''
-};
+  isLoggedIn: false,
+  userInfo: {}
+}
 
 const mutations = {
+  SET_LOGIN_STATUS(state, status) {
+    state.isLoggedIn = status
+  },
   SET_USER_INFO(state, userInfo) {
-    state.userInfo = userInfo;
-  },
-  SET_OPENID(state, openid) {
-    state.openid = openid;
+    state.userInfo = userInfo
   }
-};
-
-const actions = {
-  setUserInfo({ commit }, userInfo) {
-    commit('SET_USER_INFO', userInfo);
-  },
-  setOpenid({ commit }, openid) {
-    commit('SET_OPENID', openid);
-  }
-};
-
-const getters = {
-  getUserInfo: (state) => state.userInfo,
-  getOpenid: (state) => state.openid
-};
+  // 可能还会有其他 mutations 根据需求定义
+}
 
 export default {
   state,
-  mutations,
-  actions,
-  getters
-};
+  mutations
+}

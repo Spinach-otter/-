@@ -1,11 +1,8 @@
 /* 水平间距 */
 /* 水平间距 */
-swiper {
+image {
   height: 750rpx;
-}
-swiper image {
   width: 100%;
-  height: 100%;
 }
 .goods-info-box {
   padding: 10px;
@@ -34,6 +31,28 @@ swiper image {
   align-items: center;
   border-left: 1px solid #efefef;
   color: gray;
+}
+uni-popup {
+  background-color: #ffffff;
+  width: 100%;
+}
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
 }
 .remark-body {
   margin-top: 5px;

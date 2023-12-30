@@ -1,40 +1,40 @@
 <template>
 	<view>
-		<!-- 轮播图区域 -->
-		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true">
-		  <swiper-item v-for="(item, i) in goods_info.pics" :key="i">
-		    <!-- 把当前点击的图片的索引，传递到 preview() 处理函数中 -->
-		      <image :src="item.pics_big" @click="preview(i)"></image>
-		  </swiper-item>
-		</swiper>
+		<image :src="dishes_info.dishesPhoto" mode=""></image>
 		
 		<!-- 商品信息区域 -->
 		<view class="goods-info-box">
 		  <!-- 商品价格 -->
-		  <view class="price">￥{{goods_info.goods_price}}</view>
+		  <view class="price">￥{{dishes_info.dishesPrice}}</view>
 		  <!-- 信息主体区域 -->
 		  <view class="goods-info-body">
 		    <!-- 商品名称 -->
-		    <view class="goods-name">{{goods_info.goods_name}}</view>
+		    <view class="goods-name">{{dishes_info.dishesName}}</view>
 		    <!-- 收藏 -->
-		    <view class="favi">
-		      <uni-icons type="star" size="18" color="gray"></uni-icons>
+		    <view class="favi" v-if="this.$store.state.isLoggedIn" @click="toggleFavorite">
+		      <uni-icons :type="isFavorited ? 'star-filled' : 'star'" size="18" color="gray"></uni-icons>
 		      <text>收藏</text>
 		    </view>
 			<!-- 点评 -->
-			<view class="favi">
+			<view class="favi" v-if="this.$store.state.isLoggedIn" @click="showCommentInput = true">
 			  <uni-icons type="chatbubble" size="18" color="gray"></uni-icons>
 			  <text>点评</text>
 			</view>
 		  </view>
-		</view>
 		  
+		</view>
+		  <!-- 评论输入框 -->
+		    <view v-if="showCommentInput">
+		      <input v-model="commentText" type="text" placeholder="请输入评论内容">
+		      <button @click="submitComment">提交评论</button>
+		    </view>
+		
 		  
 		<!-- 评论区 -->
 		<view class="remark-body">
 		    <!-- 使用 v-for 遍历 remarks 数组 -->
-		    <view class="remark-item" v-for="(remark, index) in goods_info.remarks" :key="index">
-		      <image :src="remark.avt" class="avatar"></image>
+		    <view class="remark-item" v-for="(remark, index) in remarks" :key="index">
+		      <image :src="remark.userAvatar" class="avatar"></image>
 		      <view class="remark-content">{{ remark.content }}</view>
 		    </view>
 		  </view>
@@ -45,109 +45,134 @@
 	export default {
 		data() {
 		  return {
-		    // 商品详情对象
-		    goods_info: 
-			{
-				"goods_id": 8888,
-				"cat_id": 1085,
-				"goods_name": "特别好吃的菜菜菜",
-				"goods_price": 500,
-				"goods_number": 100,
-				"goods_weight": 100,
-				"goods_introduce": "富文本内容",
-				"goods_state": 2,
-				"is_del": "0",
-				"add_time": 1516361489,
-				"upd_time": 1516361489,
-				"delete_time": null,
-				"hot_mumber": 0,
-				"is_promote": false,
-				"cat_one_id": 995,
-				"cat_two_id": 1075,
-				"cat_three_id": 1085,
-				"goods_cat": "995,1075,1085",
-				"pics": [
-					{
-						"pics_id": 38711,
-						"goods_id": 8888,
-						"pics_big": "../../static/detail/12.jpg",
-						"pics_mid": "http://image1.suning.cn/uimg/b2c/newcatentries/0070134290-000000000149003877_1_400x400.jpg",
-						"pics_sma": "http://image1.suning.cn/uimg/b2c/newcatentries/0070134290-000000000149003877_1_200x200.jpg",
-						"pics_big_url": "../../static/detail/12.jpg",
-						"pics_mid_url": "http://image1.suning.cn/uimg/b2c/newcatentries/0070134290-000000000149003877_1_400x400.jpg",
-						"pics_sma_url": "http://image1.suning.cn/uimg/b2c/newcatentries/0070134290-000000000149003877_1_200x200.jpg"
-					}
-				],
-				"attrs": [
-					{
-						"goods_id": 8888,
-						"attr_id": 9210,
-						"attr_value": "户外直刀",
-						"add_price": 0,
-						"attr_name": "主体参数-类别",
-						"attr_sel": "only",
-						"attr_write": "manual",
-						"attr_vals": "放大镜"
-					}
-				],
-				"remarks": [
-					{
-						"avt":"../../static/avatar.jpg",
-						"content":"好吃",
-					},
-					{
-						"avt":"../../static/avatar.jpg",
-						"content":"还行",
-					},
-					{
-						"avt":"../../static/avatar.jpg",
-						"content":"不错",
-					},
-					{
-						"avt":"../../static/avatar.jpg",
-						"content":"一般般",
-					},
-					{
-						"avt":"../../static/avatar.jpg",
-						"content":"不太辣，很好吃",
-					},
-					{
-						"avt":"../../static/avatar.jpg",
-						"content":"不太合胃口",
-					},
-				]
-			},
+			  dishes_id:'',
+			  dishes_info:{},
+			  remarks:[],
+			  isFavorited: false, // 标识是否已经收藏
+			  showCommentInput: false, // 控制评论输入框的显示
+			  commentText: '', // 用户填写的评论内容
 		  };
 		},
 		onLoad(options) {
 		  // 获取商品 Id
-		  const goods_id = options.goods_id
+		  this.dishes_id = options.dishesId;
 		  // 调用请求商品详情数据的方法
 		  //this.getGoodsDetail(goods_id)
+		  uni.request({
+		  	url:'http://localhost:8080/dish/info/',
+		  	method:'GET',
+			data:{id:this.dishes_id},
+		  	success: (res) => {
+		  		console.log(res);
+		  		this.dishes_info=res.data;
+		  	},
+		  	fail() {
+		  		console.log("fail connect");
+		  	}
+		  })
+		  uni.request({
+		  	url:'http://localhost:8080/marks/',
+		  	method:'GET',
+		  	data:{id:this.dishes_id},
+		  	success: (res) => {
+		  		console.log(res);
+		  		this.remarks=res.data;
+		  	},
+		  	fail() {
+		  		console.log("fail connect");
+		  	}
+		  })
+		  // 检查用户是否已经收藏该商品
+		this.checkIfFavorited();
 		},
 		methods:{
-			// 实现轮播图的预览效果
-			preview(i) {
-			  // 调用 uni.previewImage() 方法预览图片
-			  uni.previewImage({
-			    // 预览时，默认显示图片的索引
-			    current: i,
-			    // 所有图片 url 地址的数组
-			    urls: this.goods_info.pics.map(x => x.pics_big)
-			  })
-			}
+			checkIfFavorited() {
+				if(!this.$store.state.isLoggedIn) return;
+			      // 假设你有一个 API 来检查用户是否已经收藏了商品
+			      uni.request({
+			        url: 'http://localhost:8080/checkFavorite/',
+			        method: 'GET',
+			        data: { userName: this.$store.state.userInfo.nickName, dishesId: this.dishes_id },
+			        success: (res) => {
+			          this.isFavorited = res.data; // 根据后端返回的结果更新收藏状态
+			        },
+			        fail() {
+			          console.log("fail connect");
+			        }
+			      });
+			    },
+			 toggleFavorite() {
+			      // 点击收藏按钮时触发的方法
+			      // 根据收藏状态来进行收藏或取消收藏的操作
+			      if (this.isFavorited) {
+			        // 取消收藏的逻辑
+			        uni.request({
+			          url: 'http://localhost:8080/del/likes/',
+			          method: 'GET',
+			          data: { userName: this.$store.state.userInfo.nickName, dishesId: this.dishes_id },
+			          success: (res) => {
+			            // this.isFavorited = res.data; // 根据后端返回的结果更新收藏状态
+						console.log(res);
+			          },
+			          fail() {
+			            console.log("fail connect");
+			          }
+			        });
+			      } else {
+			        // 收藏的逻辑
+			        uni.request({
+			          url: 'http://localhost:8080/add/likes/',
+			          method: 'GET',
+			          data: { userName: this.$store.state.userInfo.nickName, dishesId: this.dishes_id },
+			          success: (res) => {
+			            // this.isFavorited = res.data; // 根据后端返回的结果更新收藏状态
+			        	console.log(res);
+			          },
+			          fail() {
+			            console.log("fail connect");
+			          }
+			        });
+			      }
+			      
+			      // 更新收藏状态
+			      this.isFavorited = !this.isFavorited;
+			    },
+			
+			    // 提交评论方法
+			    submitComment() {
+			      // ... 提交评论的逻辑 ...
+				  uni.request({
+				    url: 'http://localhost:8080/add/mark/',
+				    method: 'GET',
+				    data: { 
+						userName: this.$store.state.userInfo.nickName, 
+						dishesId: this.dishes_id ,
+						content:this.commentText,
+					},
+				    success: (res) => {
+				      // this.isFavorited = res.data; // 根据后端返回的结果更新收藏状态
+				  	console.log(res);
+				    },
+				    fail() {
+				      console.log("fail connect");
+				    }
+				  });
+				  
+				  console.log('提交评论:', this.commentText);
+			      // 关闭评论输入框
+			      showCommentInput: false;
+				  uni.navigateTo({
+				    url: '/subpkg/goods_detail/goods_detail?dishesId=' + this.dishes_id
+				  })
+			    },
 		}
 	}
 </script>
 
 <style lang="scss">
-swiper {
+image {
   height: 750rpx;
-
-  image {
     width: 100%;
-    height: 100%;
-  }
 }
 
 // 商品信息区域的样式
@@ -185,6 +210,30 @@ swiper {
   }
 }
 
+uni-popup {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
 
 .remark-body {
 	margin-top: 5px;

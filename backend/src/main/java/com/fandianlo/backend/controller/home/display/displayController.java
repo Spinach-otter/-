@@ -1,5 +1,6 @@
 package com.fandianlo.backend.controller.home.display;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.fandianlo.backend.mapper.DishesMapper;
 import com.fandianlo.backend.mapper.ShopsMapper;
 import com.fandianlo.backend.pojo.dishes;
@@ -47,5 +48,13 @@ public class displayController {
             @RequestParam(value = "pagesize", required = false, defaultValue = "10") int pageSize
     ) {
         return dishesMapper.getDishesByShopId(Integer.valueOf(cid));
+    }
+
+    @RequestMapping("/dish/info/")
+    public dishes getInfoById(@RequestParam Integer id) {
+        QueryWrapper<dishes> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("dishes_id", id); // 根据 dishes_id 字段进行查询，假设这个字段存储了菜品的唯一标识
+
+        return dishesMapper.selectOne(queryWrapper);
     }
 }
