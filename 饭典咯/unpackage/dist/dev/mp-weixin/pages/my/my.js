@@ -37,17 +37,6 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     b: common_vendor.p({
       type: "arrowright",
       size: "15"
-    }),
-    c: common_vendor.p({
-      type: "arrowright",
-      size: "15"
-    }),
-    d: common_vendor.f($data.info, (item, i, i0) => {
-      return {
-        a: common_vendor.t(item.content),
-        b: common_vendor.t(item.num),
-        c: i
-      };
     })
   };
 }

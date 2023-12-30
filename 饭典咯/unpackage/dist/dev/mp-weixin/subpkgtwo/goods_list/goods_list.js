@@ -15,202 +15,26 @@ const _sfc_main = {
         pagesize: 10
       },
       // 商品列表的数据
-      goodsList: [
-        {
-          "goods_id": 1,
-          "cat_id": 9,
-          "goods_name": "菜品1",
-          "goods_price": 6,
-          "goods_number": 100,
-          "goods_weight": 100,
-          "goods_big_logo": "",
-          "goods_small_logo": "../../static/logo.png",
-          "add_time": 1516663280,
-          "upd_time": 1516663280,
-          "hot_mumber": 0,
-          "is_promote": false,
-          "cat_one_id": 1,
-          "cat_two_id": 3,
-          "cat_three_id": 9
-        },
-        {
-          "goods_id": 2,
-          "cat_id": 9,
-          "goods_name": "菜品2",
-          "goods_price": 9,
-          "goods_number": 100,
-          "goods_weight": 100,
-          "goods_big_logo": "",
-          "goods_small_logo": "../../static/logo.png",
-          "add_time": 1516663280,
-          "upd_time": 1516663280,
-          "hot_mumber": 0,
-          "is_promote": false,
-          "cat_one_id": 1,
-          "cat_two_id": 3,
-          "cat_three_id": 9
-        },
-        {
-          "goods_id": 3,
-          "cat_id": 9,
-          "goods_name": "菜品3",
-          "goods_price": 4,
-          "goods_number": 100,
-          "goods_weight": 100,
-          "goods_big_logo": "",
-          "goods_small_logo": "../../static/logo.png",
-          "add_time": 1516663280,
-          "upd_time": 1516663280,
-          "hot_mumber": 0,
-          "is_promote": false,
-          "cat_one_id": 1,
-          "cat_two_id": 3,
-          "cat_three_id": 9
-        },
-        {
-          "goods_id": 4,
-          "cat_id": 9,
-          "goods_name": "菜品4",
-          "goods_price": 6499,
-          "goods_number": 100,
-          "goods_weight": 100,
-          "goods_big_logo": "",
-          "goods_small_logo": "../../static/logo.png",
-          "add_time": 1516663280,
-          "upd_time": 1516663280,
-          "hot_mumber": 0,
-          "is_promote": false,
-          "cat_one_id": 1,
-          "cat_two_id": 3,
-          "cat_three_id": 9
-        },
-        {
-          "goods_id": 5,
-          "cat_id": 9,
-          "goods_name": "菜品5",
-          "goods_price": 12,
-          "goods_number": 100,
-          "goods_weight": 100,
-          "goods_big_logo": "",
-          "goods_small_logo": "../../static/logo.png",
-          "add_time": 1516663280,
-          "upd_time": 1516663280,
-          "hot_mumber": 0,
-          "is_promote": false,
-          "cat_one_id": 1,
-          "cat_two_id": 3,
-          "cat_three_id": 9
-        },
-        {
-          "goods_id": 6,
-          "cat_id": 9,
-          "goods_name": "菜品6",
-          "goods_price": 16,
-          "goods_number": 100,
-          "goods_weight": 100,
-          "goods_big_logo": "",
-          "goods_small_logo": "../../static/logo.png",
-          "add_time": 1516663280,
-          "upd_time": 1516663280,
-          "hot_mumber": 0,
-          "is_promote": false,
-          "cat_one_id": 1,
-          "cat_two_id": 3,
-          "cat_three_id": 9
-        },
-        {
-          "goods_id": 7,
-          "cat_id": 9,
-          "goods_name": "菜品7",
-          "goods_price": 20,
-          "goods_number": 100,
-          "goods_weight": 100,
-          "goods_big_logo": "",
-          "goods_small_logo": "../../static/logo.png",
-          "add_time": 1516663280,
-          "upd_time": 1516663280,
-          "hot_mumber": 0,
-          "is_promote": false,
-          "cat_one_id": 1,
-          "cat_two_id": 3,
-          "cat_three_id": 9
-        },
-        {
-          "goods_id": 8,
-          "cat_id": 9,
-          "goods_name": "菜品8",
-          "goods_price": 11,
-          "goods_number": 100,
-          "goods_weight": 100,
-          "goods_big_logo": "",
-          "goods_small_logo": "../../static/logo.png",
-          "add_time": 1516663280,
-          "upd_time": 1516663280,
-          "hot_mumber": 0,
-          "is_promote": false,
-          "cat_one_id": 1,
-          "cat_two_id": 3,
-          "cat_three_id": 9
-        },
-        {
-          "goods_id": 9,
-          "cat_id": 9,
-          "goods_name": "菜品9",
-          "goods_price": 13,
-          "goods_number": 100,
-          "goods_weight": 100,
-          "goods_big_logo": "",
-          "goods_small_logo": "../../static/logo.png",
-          "add_time": 1516663280,
-          "upd_time": 1516663280,
-          "hot_mumber": 0,
-          "is_promote": false,
-          "cat_one_id": 1,
-          "cat_two_id": 3,
-          "cat_three_id": 9
-        },
-        {
-          "goods_id": 10,
-          "cat_id": 9,
-          "goods_name": "菜品10",
-          "goods_price": 12,
-          "goods_number": 100,
-          "goods_weight": 100,
-          "goods_big_logo": "",
-          "goods_small_logo": "../../static/logo.png",
-          "add_time": 1516663280,
-          "upd_time": 1516663280,
-          "hot_mumber": 0,
-          "is_promote": false,
-          "cat_one_id": 1,
-          "cat_two_id": 3,
-          "cat_three_id": 9
-        },
-        {
-          "goods_id": 11,
-          "cat_id": 9,
-          "goods_name": "菜品11",
-          "goods_price": 6,
-          "goods_number": 100,
-          "goods_weight": 100,
-          "goods_big_logo": "",
-          "goods_small_logo": "../../static/logo.png",
-          "add_time": 1516663280,
-          "upd_time": 1516663280,
-          "hot_mumber": 0,
-          "is_promote": false,
-          "cat_one_id": 1,
-          "cat_two_id": 3,
-          "cat_three_id": 9
-        }
-      ],
+      goodsList: [],
       // 总数量，用来实现分页
       total: 11
     };
   },
   onLoad(options) {
-    this.queryObj.query = options.dain_name || "";
-    this.queryObj.cid = options.cid || "";
+    this.queryObj.query = options.shopName || "";
+    this.queryObj.cid = options.shopId || "";
+    common_vendor.index.request({
+      url: "http://localhost:8080/dishes/",
+      method: "GET",
+      data: this.queryObj,
+      success: (res) => {
+        console.log(res);
+        this.goodsList = res.data;
+      },
+      fail() {
+        console.log("fail connect");
+      }
+    });
   },
   methods: {
     // 点击跳转到商品详情页面
@@ -225,9 +49,9 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
     a: common_vendor.f($data.goodsList, (goods, i, i0) => {
       return {
-        a: goods.goods_small_logo,
-        b: common_vendor.t(goods.goods_name),
-        c: common_vendor.t(goods.goods_price),
+        a: goods.dishesPhoto,
+        b: common_vendor.t(goods.dishesName),
+        c: common_vendor.t(goods.dishesPrice),
         d: i,
         e: common_vendor.o(($event) => $options.gotoDetail(goods), i)
       };

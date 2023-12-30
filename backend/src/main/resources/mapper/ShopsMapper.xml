@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.fandianlo.backend.mapper.ShopsMapper">
+    <select id="cate0" resultType="com.fandianlo.backend.pojo.shops">
+        SELECT *
+        FROM shops
+        WHERE shop_id IN (
+            SELECT DISTINCT dishes_shop
+            FROM dishes
+            WHERE dishes_num = '1' AND dishes_floor = '1'
+        )
+    </select>
+    <select id="cate1" resultType="com.fandianlo.backend.pojo.shops">
+        SELECT *
+        FROM shops
+        WHERE shop_id IN (
+            SELECT DISTINCT dishes_shop
+            FROM dishes
+            WHERE dishes_num = '1' AND dishes_floor = '2'
+        )
+    </select>
+    <select id="cate2" resultType="com.fandianlo.backend.pojo.shops">
+        SELECT *
+        FROM shops
+        WHERE shop_id IN (
+            SELECT DISTINCT dishes_shop
+            FROM dishes
+            WHERE dishes_num = '2' AND dishes_floor = '1'
+        )
+    </select>
+    <select id="cate3" resultType="com.fandianlo.backend.pojo.shops">
+        SELECT *
+        FROM shops
+        WHERE shop_id IN (
+            SELECT DISTINCT dishes_shop
+            FROM dishes
+            WHERE dishes_num = '2' AND dishes_floor = '2'
+        )
+    </select>
+    <select id="cate4" resultType="com.fandianlo.backend.pojo.shops">
+        SELECT *
+        FROM shops
+        WHERE shop_id IN (
+            SELECT DISTINCT dishes_shop
+            FROM dishes
+            WHERE dishes_num = '2' AND dishes_floor = '3'
+        )
+    </select>
+</mapper>

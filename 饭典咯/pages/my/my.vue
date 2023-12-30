@@ -34,10 +34,10 @@
 	      <text>食堂情况反馈</text>
 	      <uni-icons type="arrowright" size="15"></uni-icons>
 	    </view>
-	    <view class="panel-list-item">
+	    <!-- <view class="panel-list-item">
 	      <text>联系客服</text>
 	      <uni-icons type="arrowright" size="15"></uni-icons>
-	    </view>
+	    </view> -->
 	    <view class="panel-list-item">
 	      <text>退出登录</text>
 	      <uni-icons type="arrowright" size="15"></uni-icons>
@@ -45,14 +45,14 @@
 	  </view>
 	</view>
 	
-	<view class="test" v-for="(item,i) in info" :key="i">
+	<!-- <view class="test" v-for="(item,i) in info" :key="i">
 		<view class="test-c">
 			{{item.content}}
 		</view>
 		<view class="test-s">
 			{{item.num}}
 		</view>
-	</view>
+	</view> -->
   </view>
 </template>
 

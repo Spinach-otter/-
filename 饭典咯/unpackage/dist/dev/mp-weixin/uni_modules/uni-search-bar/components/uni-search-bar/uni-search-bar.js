@@ -55,8 +55,8 @@ const _sfc_main = {
   },
   data() {
     return {
-      show: false,
-      showSync: false,
+      show: true,
+      showSync: true,
       searchVal: ""
     };
   },

@@ -15,9 +15,9 @@
             <!-- 三级分类 Item 项 -->
             <view class="cate-lv3-item" v-for="(item3, i3) in cateLevel2" :key="i3" @click="gotoGoodsList(item3)">
               <!-- 图片 -->
-              <image :src="item3.cat_icon"></image>
+              <image :src="item3.shopPhoto"></image>
               <!-- 文本 -->
-              <text>{{item3.cat_name}}</text>
+              <text>{{item3.shopName}}</text>
             </view>
           </view>
       </scroll-view>
@@ -41,210 +41,210 @@
 				"cat_id": 1,
 				"cat_name": "一食一楼",
 				"children": [
-					{
-						"cat_id": 1,
-						  "cat_name": "店1",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 2,
-						  "cat_name": "店2",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 3,
-						  "cat_name": "店3",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 4,
-						  "cat_name": "店4",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 5,
-						  "cat_name": "店5",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 6,
-						  "cat_name": "店6",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 7,
-						  "cat_name": "店7",
-						  "cat_icon": "../../static/logo.png"
-					},
+					// {
+					// 	"cat_id": 1,
+					// 	  "cat_name": "店1",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 2,
+					// 	  "cat_name": "店2",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 3,
+					// 	  "cat_name": "店3",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 4,
+					// 	  "cat_name": "店4",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 5,
+					// 	  "cat_name": "店5",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 6,
+					// 	  "cat_name": "店6",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 7,
+					// 	  "cat_name": "店7",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
 				],
 			},
 			{
 				"cat_id": 2,
 				"cat_name": "一食二楼",
 				"children": [
-					{
-						"cat_id": 1,
-						  "cat_name": "店1",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 2,
-						  "cat_name": "店2",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 3,
-						  "cat_name": "店3",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 4,
-						  "cat_name": "店4",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 5,
-						  "cat_name": "店5",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 6,
-						  "cat_name": "店6",
-						  "cat_icon": "../../static/logo.png"
-					},
+					// {
+					// 	"cat_id": 1,
+					// 	  "cat_name": "店1",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 2,
+					// 	  "cat_name": "店2",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 3,
+					// 	  "cat_name": "店3",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 4,
+					// 	  "cat_name": "店4",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 5,
+					// 	  "cat_name": "店5",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 6,
+					// 	  "cat_name": "店6",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
 				],
 			},
 			{
 				"cat_id": 3,
 				"cat_name": "二食一楼",
 				"children": [
-					{
-						"cat_id": 1,
-						  "cat_name": "店1",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 2,
-						  "cat_name": "店2",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 3,
-						  "cat_name": "店3",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 4,
-						  "cat_name": "店4",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 5,
-						  "cat_name": "店5",
-						  "cat_icon": "../../static/logo.png"
-					},
+					// {
+					// 	"cat_id": 1,
+					// 	  "cat_name": "店1",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 2,
+					// 	  "cat_name": "店2",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 3,
+					// 	  "cat_name": "店3",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 4,
+					// 	  "cat_name": "店4",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 5,
+					// 	  "cat_name": "店5",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
 				],
 			},
 			{
 				"cat_id": 4,
 				"cat_name": "二食二楼",
 				"children": [
-					{
-						"cat_id": 1,
-						  "cat_name": "店1",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 2,
-						  "cat_name": "店2",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 3,
-						  "cat_name": "店3",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 4,
-						  "cat_name": "店4",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 5,
-						  "cat_name": "店5",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 6,
-						  "cat_name": "店6",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 7,
-						  "cat_name": "店7",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 8,
-						  "cat_name": "店8",
-						  "cat_icon": "../../static/logo.png"
-					},
+					// {
+					// 	"cat_id": 1,
+					// 	  "cat_name": "店1",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 2,
+					// 	  "cat_name": "店2",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 3,
+					// 	  "cat_name": "店3",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 4,
+					// 	  "cat_name": "店4",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 5,
+					// 	  "cat_name": "店5",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 6,
+					// 	  "cat_name": "店6",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 7,
+					// 	  "cat_name": "店7",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 8,
+					// 	  "cat_name": "店8",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
 				],
 			},
 			{
 				"cat_id": 5,
 				"cat_name": "二食三楼",
 				"children": [
-					{
-						"cat_id": 1,
-						  "cat_name": "店1",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 2,
-						  "cat_name": "店2",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 3,
-						  "cat_name": "店3",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 4,
-						  "cat_name": "店4",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 5,
-						  "cat_name": "店5",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 6,
-						  "cat_name": "店6",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 7,
-						  "cat_name": "店7",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 8,
-						  "cat_name": "店8",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 9,
-						  "cat_name": "店9",
-						  "cat_icon": "../../static/logo.png"
-					},
-					{
-						"cat_id": 10,
-						  "cat_name": "店10",
-						  "cat_icon": "../../static/logo.png"
-					},
+					// {
+					// 	"cat_id": 1,
+					// 	  "cat_name": "店1",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 2,
+					// 	  "cat_name": "店2",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 3,
+					// 	  "cat_name": "店3",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 4,
+					// 	  "cat_name": "店4",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 5,
+					// 	  "cat_name": "店5",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 6,
+					// 	  "cat_name": "店6",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 7,
+					// 	  "cat_name": "店7",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 8,
+					// 	  "cat_name": "店8",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 9,
+					// 	  "cat_name": "店9",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
+					// {
+					// 	"cat_id": 10,
+					// 	  "cat_name": "店10",
+					// 	  "cat_icon": "../../static/logo.png"
+					// },
 				],
 			},
 		],
@@ -255,7 +255,66 @@
       const sysInfo = uni.getSystemInfoSync()
       // 为 wh 窗口可用高度动态赋值
       this.wh = sysInfo.windowHeight - 50
+	  
+	  
+	  uni.request({
+	  	url:'http://localhost:8080/cat0/',
+	  	method:'GET',
+	  	success: (res) => {
+	  		console.log(res);
+	  		this.cateList[0].children=res.data;
+			this.cateLevel2 = this.cateList[0].children
+	  	},
+	  	fail() {
+	  		console.log("fail connect");
+	  	}
+	  });
 	  this.cateLevel2 = this.cateList[0].children
+	  uni.request({
+	  	url:'http://localhost:8080/cat1/',
+	  	method:'GET',
+	  	success: (res) => {
+	  		console.log(res);
+	  		this.cateList[1].children=res.data;
+	  	},
+	  	fail() {
+	  		console.log("fail connect");
+	  	}
+	  });
+	  uni.request({
+	  	url:'http://localhost:8080/cat2/',
+	  	method:'GET',
+	  	success: (res) => {
+	  		console.log(res);
+	  		this.cateList[2].children=res.data;
+	  	},
+	  	fail() {
+	  		console.log("fail connect");
+	  	}
+	  });
+	  uni.request({
+	  	url:'http://localhost:8080/cat3/',
+	  	method:'GET',
+	  	success: (res) => {
+	  		console.log(res);
+	  		this.cateList[3].children=res.data;
+	  	},
+	  	fail() {
+	  		console.log("fail connect");
+	  	}
+	  });
+	  uni.request({
+	  	url:'http://localhost:8080/cat4/',
+	  	method:'GET',
+	  	success: (res) => {
+	  		console.log(res);
+	  		this.cateList[4].children=res.data;
+	  	},
+	  	fail() {
+	  		console.log("fail connect");
+	  	}
+	  });
+	  
     },
 	methods: {
 	  // 选中项改变的事件处理函数
@@ -267,7 +326,7 @@
 	  // 点击三级分类项跳转到商品列表页面
 	  gotoGoodsList(item3) {
 	    uni.navigateTo({
-	      url: '/subpkgtwo/goods_list/goods_list?cid=' + item3.cat_id
+	      url: '/subpkgtwo/goods_list/goods_list?shopId=' + item3.shopId
 	    })
 	  },
 	  // 跳转到分包中的搜索页面
