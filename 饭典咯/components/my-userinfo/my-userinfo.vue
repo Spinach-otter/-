@@ -30,7 +30,7 @@
 	
 	  <!-- 第三个面板 -->
 	  <view class="panel">
-	    <view class="panel-list-item">
+	    <view class="panel-list-item" @click="gotofeedback">
 	      <text>食堂情况反馈</text>
 	      <uni-icons type="arrowright" size="15"></uni-icons>
 	    </view>
@@ -101,6 +101,11 @@
 				// this.$store.commit('SET_USER_INFO', userInfo.userInfo); // 修改登录状态为 true
 				uni.navigateTo({
 				  url: '/pages/my/my'
+				})
+			},
+			gotofeedback() {
+				uni.navigateTo({
+				  url: '/subpkgfive/feedback/feedback'
 				})
 			}
 		}

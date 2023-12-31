@@ -16,33 +16,36 @@ const _sfc_main = {
   },
   onLoad(options) {
     this.dishes_id = options.dishesId;
-    common_vendor.index.request({
-      url: "http://localhost:8080/dish/info/",
-      method: "GET",
-      data: { id: this.dishes_id },
-      success: (res) => {
-        console.log(res);
-        this.dishes_info = res.data;
-      },
-      fail() {
-        console.log("fail connect");
-      }
-    });
-    common_vendor.index.request({
-      url: "http://localhost:8080/marks/",
-      method: "GET",
-      data: { id: this.dishes_id },
-      success: (res) => {
-        console.log(res);
-        this.remarks = res.data;
-      },
-      fail() {
-        console.log("fail connect");
-      }
-    });
+    this.fresh();
     this.checkIfFavorited();
   },
   methods: {
+    fresh() {
+      common_vendor.index.request({
+        url: "http://localhost:8080/dish/info/",
+        method: "GET",
+        data: { id: this.dishes_id },
+        success: (res) => {
+          console.log(res);
+          this.dishes_info = res.data;
+        },
+        fail() {
+          console.log("fail connect");
+        }
+      });
+      common_vendor.index.request({
+        url: "http://localhost:8080/marks/",
+        method: "GET",
+        data: { id: this.dishes_id },
+        success: (res) => {
+          console.log(res);
+          this.remarks = res.data;
+        },
+        fail() {
+          console.log("fail connect");
+        }
+      });
+    },
     checkIfFavorited() {
       if (!this.$store.state.isLoggedIn)
         return;
@@ -104,9 +107,7 @@ const _sfc_main = {
         }
       });
       console.log("提交评论:", this.commentText);
-      common_vendor.index.navigateTo({
-        url: "/subpkg/goods_detail/goods_detail?dishesId=" + this.dishes_id
-      });
+      this.fresh();
     }
   }
 };

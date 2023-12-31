@@ -42,6 +42,11 @@ const _sfc_main = {
       common_vendor.index.navigateTo({
         url: "/pages/my/my"
       });
+    },
+    gotofeedback() {
+      common_vendor.index.navigateTo({
+        url: "/subpkgfive/feedback/feedback"
+      });
     }
   }
 };
@@ -63,11 +68,12 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       type: "arrowright",
       size: "15"
     }),
-    f: common_vendor.p({
+    f: common_vendor.o((...args) => $options.gotofeedback && $options.gotofeedback(...args)),
+    g: common_vendor.p({
       type: "arrowright",
       size: "15"
     }),
-    g: common_vendor.o((...args) => $options.logout && $options.logout(...args))
+    h: common_vendor.o((...args) => $options.logout && $options.logout(...args))
   };
 }
 const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/chenyanling/Desktop/饭典咯/饭典咯/components/my-userinfo/my-userinfo.vue"]]);

@@ -22,6 +22,18 @@
       "pages": [
         "search/search"
       ]
+    },
+    {
+      "root": "subpkgfour",
+      "pages": [
+        "notice/notice"
+      ]
+    },
+    {
+      "root": "subpkgfive",
+      "pages": [
+        "feedback/feedback"
+      ]
     }
   ],
   "window": {

@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "",
+          "pathName": "subpkgfour/notice/notice",
+          "query": "notice_id=3",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "my",
           "pathName": "pages/my/my",
           "query": "",

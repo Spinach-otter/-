@@ -39,7 +39,7 @@
 			 // console.log(userInfo);
 			 this.$store.commit('SET_LOGIN_STATUS', true); // 修改登录状态为 true
 			 this.$store.commit('SET_USER_INFO', userInfo.userInfo); // 修改登录状态为 true
-			 // console.log(this.$store.state.userInfo)
+			 console.log(this.$store.state.userInfo)
 			 // uni.request({
 			 // 	url:'http://localhost:8080/add/user/',
 			 // 	method:'GET',

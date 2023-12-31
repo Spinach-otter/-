@@ -63,6 +63,34 @@
 			}
 				
 			]
+		},
+		{
+			"root": "subpkgfour",
+			"pages": [
+			{
+				"path" : "notice/notice",
+				"style" : 
+				{
+					"navigationBarTitleText" : "",
+					"enablePullDownRefresh" : false
+				}
+			}
+				
+			]
+		},
+		{
+			"root": "subpkgfive",
+			"pages": [{
+				"path" : "feedback/feedback",
+				"style" : 
+				{
+					"navigationBarTitleText" : "",
+					"enablePullDownRefresh" : false
+				}
+			}
+			
+				
+			]
 		}
 	],
 	"globalStyle": {

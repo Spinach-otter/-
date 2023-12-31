@@ -53,7 +53,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     b: common_vendor.f($data.swiperList, (item, i, i0) => {
       return {
         a: item.poster,
-        b: i
+        b: "/subpkgfour/notice/notice?notice_id=" + item.nid,
+        c: i
       };
     }),
     c: common_vendor.f($data.DianList, (item, i, i0) => {

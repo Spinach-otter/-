@@ -58,34 +58,38 @@
 		  this.dishes_id = options.dishesId;
 		  // 调用请求商品详情数据的方法
 		  //this.getGoodsDetail(goods_id)
-		  uni.request({
-		  	url:'http://localhost:8080/dish/info/',
-		  	method:'GET',
-			data:{id:this.dishes_id},
-		  	success: (res) => {
-		  		console.log(res);
-		  		this.dishes_info=res.data;
-		  	},
-		  	fail() {
-		  		console.log("fail connect");
-		  	}
-		  })
-		  uni.request({
-		  	url:'http://localhost:8080/marks/',
-		  	method:'GET',
-		  	data:{id:this.dishes_id},
-		  	success: (res) => {
-		  		console.log(res);
-		  		this.remarks=res.data;
-		  	},
-		  	fail() {
-		  		console.log("fail connect");
-		  	}
-		  })
+		  this.fresh();
 		  // 检查用户是否已经收藏该商品
 		this.checkIfFavorited();
 		},
 		methods:{
+			fresh() {
+				showCommentInput:false;
+				uni.request({
+					url:'http://localhost:8080/dish/info/',
+					method:'GET',
+							data:{id:this.dishes_id},
+					success: (res) => {
+						console.log(res);
+						this.dishes_info=res.data;
+					},
+					fail() {
+						console.log("fail connect");
+					}
+				})
+				uni.request({
+					url:'http://localhost:8080/marks/',
+					method:'GET',
+					data:{id:this.dishes_id},
+					success: (res) => {
+						console.log(res);
+						this.remarks=res.data;
+					},
+					fail() {
+						console.log("fail connect");
+					}
+				})
+			},
 			checkIfFavorited() {
 				if(!this.$store.state.isLoggedIn) return;
 			      // 假设你有一个 API 来检查用户是否已经收藏了商品
@@ -159,11 +163,8 @@
 				  });
 				  
 				  console.log('提交评论:', this.commentText);
-			      // 关闭评论输入框
-			      showCommentInput: false;
-				  uni.navigateTo({
-				    url: '/subpkg/goods_detail/goods_detail?dishesId=' + this.dishes_id
-				  })
+			      
+				  this.fresh();
 			    },
 		}
 	}

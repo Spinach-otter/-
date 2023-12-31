@@ -1,0 +1,1 @@
+<view class="notice"><view class="poster"><image src="{{a}}" class="poster-image"></image></view><view class="title">{{b}}</view><view class="content">{{c}}</view></view>

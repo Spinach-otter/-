@@ -17,6 +17,7 @@ const _sfc_main = {
         success: (userInfo) => {
           this.$store.commit("SET_LOGIN_STATUS", true);
           this.$store.commit("SET_USER_INFO", userInfo.userInfo);
+          console.log(this.$store.state.userInfo);
           common_vendor.index.showToast(
             {
               title: "登录成功!",
