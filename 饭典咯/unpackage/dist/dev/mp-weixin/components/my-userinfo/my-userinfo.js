@@ -47,6 +47,11 @@ const _sfc_main = {
       common_vendor.index.navigateTo({
         url: "/subpkgfive/feedback/feedback"
       });
+    },
+    gotofoodboox() {
+      common_vendor.index.navigateTo({
+        url: "/subpkgsix/foodbox/foodbox"
+      });
     }
   }
 };
@@ -68,13 +73,18 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       type: "arrowright",
       size: "15"
     }),
-    f: common_vendor.o((...args) => $options.gotofeedback && $options.gotofeedback(...args)),
+    f: common_vendor.o((...args) => $options.gotofoodboox && $options.gotofoodboox(...args)),
     g: common_vendor.p({
       type: "arrowright",
       size: "15"
     }),
-    h: common_vendor.o((...args) => $options.logout && $options.logout(...args))
+    h: common_vendor.o((...args) => $options.gotofeedback && $options.gotofeedback(...args)),
+    i: common_vendor.p({
+      type: "arrowright",
+      size: "15"
+    }),
+    j: common_vendor.o((...args) => $options.logout && $options.logout(...args))
   };
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/chenyanling/Desktop/饭典咯/饭典咯/components/my-userinfo/my-userinfo.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/chenyanling/Desktop/MyCompusLife/科目/软件工程导论/饭典咯/饭典咯/components/my-userinfo/my-userinfo.vue"]]);
 wx.createComponent(Component);

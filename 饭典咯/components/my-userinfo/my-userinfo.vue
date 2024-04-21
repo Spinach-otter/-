@@ -30,6 +30,10 @@
 	
 	  <!-- 第三个面板 -->
 	  <view class="panel">
+		  <view class="panel-list-item" @click="gotofoodboox">
+		    <text>菜品盲盒</text>
+		    <uni-icons type="arrowright" size="15"></uni-icons>
+		  </view>
 	    <view class="panel-list-item" @click="gotofeedback">
 	      <text>食堂情况反馈</text>
 	      <uni-icons type="arrowright" size="15"></uni-icons>
@@ -106,6 +110,11 @@
 			gotofeedback() {
 				uni.navigateTo({
 				  url: '/subpkgfive/feedback/feedback'
+				})
+			},
+			gotofoodboox(){
+				uni.navigateTo({
+				  url: '/subpkgsix/foodbox/foodbox'
 				})
 			}
 		}

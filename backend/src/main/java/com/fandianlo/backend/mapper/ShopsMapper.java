@@ -13,4 +13,6 @@ public interface ShopsMapper extends BaseMapper<shops> {
     List<shops> cate2();
     List<shops> cate3();
     List<shops> cate4();
+
+    String getShopName(Integer id);
 }

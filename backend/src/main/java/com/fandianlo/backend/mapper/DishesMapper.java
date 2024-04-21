@@ -13,4 +13,6 @@ public interface DishesMapper extends BaseMapper<dishes> {
     List<dishes> getDishesByKeyWords(String kw);
 
 
+    List<String> getDishesByDNumAndDFloor(String num,String floor);
+    List<dishes> getDishesByDNumAndDFloorAndDShop(String num,String floor,String shop);
 }

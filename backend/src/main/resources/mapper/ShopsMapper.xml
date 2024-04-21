@@ -46,4 +46,7 @@
             WHERE dishes_num = '2' AND dishes_floor = '3'
         )
     </select>
+    <select id="getShopName" resultType="java.lang.String">
+        select shop_name from shops where shop_id=#{id}
+    </select>
 </mapper>

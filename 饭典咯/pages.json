@@ -91,6 +91,19 @@
 			
 				
 			]
+		},
+		{
+			"root": "subpkgsix",
+			"pages": [{
+				"path" : "foodbox/foodbox",
+				"style" : 
+				{
+					"navigationBarTitleText" : "",
+					"enablePullDownRefresh" : false
+				}
+			}
+				
+			]
 		}
 	],
 	"globalStyle": {

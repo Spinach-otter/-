@@ -68,7 +68,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     c: common_vendor.f($data.searchResults, (item, i, i0) => {
       return {
         a: common_vendor.t(item.dishesName),
-        b: "cc945ec0-1-" + i0,
+        b: "b3a97dc8-1-" + i0,
         c: i,
         d: common_vendor.o(($event) => $options.gotoDetail(item.dishesId), i)
       };
@@ -79,5 +79,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   };
 }
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/chenyanling/Desktop/饭典咯/饭典咯/subpkgthree/search/search.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "/Users/chenyanling/Desktop/MyCompusLife/科目/软件工程导论/饭典咯/饭典咯/subpkgthree/search/search.vue"]]);
 wx.createPage(MiniProgramPage);

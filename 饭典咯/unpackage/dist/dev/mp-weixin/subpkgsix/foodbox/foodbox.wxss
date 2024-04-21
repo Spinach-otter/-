@@ -1,0 +1,136 @@
+/* 水平间距 */
+/* 水平间距 */
+@font-face {
+  font-family: "阿里妈妈刀隶体 Regular";
+  font-weight: 400;
+  src: url("//at.alicdn.com/wf/webfont/vJMiES2UAeVe/TxIjZW9ri2TA.woff2") format("woff2"), url("//at.alicdn.com/wf/webfont/vJMiES2UAeVe/qQAuYBLRjMj1.woff") format("woff");
+  font-display: swap;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("https://lsy-pictures-1318433651.cos.ap-shanghai.myqcloud.com/%E8%83%8C%E6%99%AF.gif");
+  background-size: 100% 100%;
+}
+.mian {
+  float: left;
+  width: 150rpx;
+  height: 150rpx;
+  background-image: url("https://s3.bmp.ovh/imgs/2024/04/08/2449e19365f04fa2.png");
+  background-size: 100% 100%;
+}
+.banner {
+  width: 100%;
+  /* 设置横幅宽度 */
+  height: 160rpx;
+  background: linear-gradient(to right, #ff0000, #cc0000);
+  /* 设置红色渐变背景 */
+  margin-top: 10rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  /* 设置相对定位 */
+  border-radius: 13%;
+}
+
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+.banner-t {
+  border: #fff 1rpx solid;
+  padding: 0 8rpx;
+  margin: 0 10rpx;
+}
+.banner-text {
+  font-family: "阿里妈妈刀隶体 Regular";
+  font-size: 33px;
+  color: #fff;
+  /* 设置文字颜色为白色 */
+  border: #fff 1rpx solid;
+  padding: 13rpx 0rpx;
+  margin: 0 6rpx;
+  letter-spacing: 1rpx;
+}
+.button-container {
+  position: fixed;
+  bottom: 3%;
+}
+.open-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300rpx;
+  height: 90rpx;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 8rpx;
+  font-family: "阿里妈妈刀隶体 Regular";
+  font-size: 45rpx;
+  letter-spacing: 12rpx;
+}
+.open-button:hover {
+  background-color: #cc0000;
+}
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* 	background-image: url("https://lsy-pictures-1318433651.cos.ap-shanghai.myqcloud.com/%E6%8A%BD%E5%A5%96%E4%B8%AD.gif"); */
+  background-image: url("https://lsy-pictures-1318433651.cos.ap-shanghai.myqcloud.com/%E6%97%A0%E5%85%89.gif");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  text-align: center;
+}
+.dialog .dialog-text {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://lsy-pictures-1318433651.cos.ap-shanghai.myqcloud.com/%E8%8F%9C%E5%8D%95.png");
+  background-size: 100% 100%;
+}
+.dialog .caidan {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.dialog .loca {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40rpx;
+  color: #ec3456;
+  font-weight: 700;
+  border-bottom: #ec3456 8rpx solid;
+}
+.dialog .name {
+  margin: 20rpx;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 65rpx;
+  font-weight: 700;
+  color: #ea501a;
+  border-bottom: #ec3456 8rpx solid;
+}
+.dialog .foodphoto {
+  margin-top: 50%;
+  width: 480rpx;
+  height: 400rpx;
+  border: #ec3456 15rpx solid;
+}
+.dialog .close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 25rpx;
+  height: 50rpx;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: red;
+  border: none;
+  border-radius: 100%;
+  font-size: 40rpx;
+  letter-spacing: 10rpx;
+}

@@ -18,7 +18,7 @@
     }
   },
   "compileType": "miniprogram",
-  "libVersion": "3.2.2",
+  "libVersion": "",
   "appid": "wx587e54fe283722f4",
   "projectname": "饭典咯",
   "condition": {

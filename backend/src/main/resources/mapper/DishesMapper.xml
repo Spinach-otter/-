@@ -10,4 +10,10 @@
     <select id="getDishesByKeyWords" resultType="com.fandianlo.backend.pojo.dishes">
         SELECT * FROM dishes WHERE dishes_name LIKE CONCAT('%', #{kw}, '%')
     </select>
+    <select id="getDishesByDNumAndDFloor" resultType="java.lang.String">
+        SELECT dishes_shop FROM dishes  WHERE dishes_num = #{num} AND dishes_floor = #{floor}
+    </select>
+    <select id="getDishesByDNumAndDFloorAndDShop" resultType="com.fandianlo.backend.pojo.dishes">
+        SELECT * FROM dishes  WHERE dishes_name not like '%加%' AND  dishes_name not like '%口味%' AND  dishes_name not like '%小菜%' AND dishes_num = #{num} AND dishes_floor = #{floor} AND dishes_shop = #{shop}
+    </select>
 </mapper>

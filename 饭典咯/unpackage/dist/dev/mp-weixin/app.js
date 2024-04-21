@@ -11,6 +11,7 @@ if (!Math) {
   "./subpkgthree/search/search.js";
   "./subpkgfour/notice/notice.js";
   "./subpkgfive/feedback/feedback.js";
+  "./subpkgsix/foodbox/foodbox.js";
 }
 const _sfc_main = {
   onLaunch: function() {
@@ -24,7 +25,7 @@ const _sfc_main = {
     console.log("App Hide");
   }
 };
-const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/chenyanling/Desktop/饭典咯/饭典咯/App.vue"]]);
+const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "/Users/chenyanling/Desktop/MyCompusLife/科目/软件工程导论/饭典咯/饭典咯/App.vue"]]);
 function createApp() {
   const app = common_vendor.createSSRApp(App);
   app.use(store_index.store);
