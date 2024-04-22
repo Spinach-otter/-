@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class likes {
     @TableId(type = IdType.AUTO)
-    private Integer likes_id;
-    private Integer user_id;
-    private Integer dishes_id;
+    private Integer likesId;
+    private Integer userId;
+    private Integer dishesId;
 }

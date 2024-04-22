@@ -34,6 +34,7 @@ public class DishDetailController {
         String uname = data.get("userName");
         Integer did = Integer.valueOf(data.get("dishesId"));
         Integer uid = userMapper.getIdByName(uname);
+//        System.out.println("hihihi"+likesMapper.HaveLikes(uid,did));
         if(likesMapper.HaveLikes(uid,did).isEmpty()) return false;
         else return true;
     }

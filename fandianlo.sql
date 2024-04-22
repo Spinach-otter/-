@@ -11,7 +11,7 @@
  Target Server Version : 80032
  File Encoding         : 65001
 
- Date: 31/12/2023 22:06:06
+ Date: 22/04/2024 15:57:54
 */
 
 SET NAMES utf8mb4;
@@ -112,17 +112,21 @@ CREATE TABLE `likes` (
   KEY `dishes_id` (`dishes_id`),
   CONSTRAINT `likes_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   CONSTRAINT `likes_ibfk_2` FOREIGN KEY (`dishes_id`) REFERENCES `dishes` (`dishes_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of likes
 -- ----------------------------
 BEGIN;
-INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (1, 3, 1);
 INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (2, 3, 6);
-INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (3, NULL, 1);
 INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (4, 3, 3);
 INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (5, 3, 10);
+INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (7, 3, 1);
+INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (8, 1, 1);
+INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (9, 1, 12);
+INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (10, 1, 15);
+INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (11, 2, 10);
+INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (12, 2, 12);
 COMMIT;
 
 -- ----------------------------
@@ -160,7 +164,7 @@ CREATE TABLE `notices` (
   `publish_time` datetime DEFAULT NULL,
   `revoke_time` datetime DEFAULT NULL,
   PRIMARY KEY (`notice_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of notices
@@ -204,7 +208,7 @@ CREATE TABLE `remarks` (
   KEY `dishes_id` (`dishes_id`),
   CONSTRAINT `remarks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   CONSTRAINT `remarks_ibfk_2` FOREIGN KEY (`dishes_id`) REFERENCES `dishes` (`dishes_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of remarks
@@ -218,6 +222,8 @@ INSERT INTO `remarks` (`remarks_id`, `user_id`, `dishes_id`, `content`) VALUES (
 INSERT INTO `remarks` (`remarks_id`, `user_id`, `dishes_id`, `content`) VALUES (6, 3, 1, '吃了又吃');
 INSERT INTO `remarks` (`remarks_id`, `user_id`, `dishes_id`, `content`) VALUES (7, 3, 3, 'very good');
 INSERT INTO `remarks` (`remarks_id`, `user_id`, `dishes_id`, `content`) VALUES (8, 2, 3, '一般');
+INSERT INTO `remarks` (`remarks_id`, `user_id`, `dishes_id`, `content`) VALUES (9, 3, 1, '1111');
+INSERT INTO `remarks` (`remarks_id`, `user_id`, `dishes_id`, `content`) VALUES (10, 3, 1, '1111');
 COMMIT;
 
 -- ----------------------------
