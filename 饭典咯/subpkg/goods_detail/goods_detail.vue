@@ -165,6 +165,8 @@
 				  console.log('提交评论:', this.commentText);
 			      
 				  this.fresh();
+				  // 提交评论后清空评论内容
+				  this.commentText = '';
 			    },
 		}
 	}

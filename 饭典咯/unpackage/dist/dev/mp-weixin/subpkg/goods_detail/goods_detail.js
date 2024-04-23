@@ -108,6 +108,7 @@ const _sfc_main = {
       });
       console.log("提交评论:", this.commentText);
       this.fresh();
+      this.commentText = "";
     }
   }
 };

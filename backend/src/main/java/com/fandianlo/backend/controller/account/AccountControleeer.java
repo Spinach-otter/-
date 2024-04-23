@@ -1,5 +1,6 @@
 package com.fandianlo.backend.controller.account;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.fandianlo.backend.mapper.UserMapper;
 import com.fandianlo.backend.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,9 +24,16 @@ public class AccountControleeer {
 
     @RequestMapping("/add/user/")
     public Map<String,String> addUser(@RequestParam Map<String,String> data) {
-        User user = new User(null,data.get("name"),data.get("avatar"));
-        userMapper.insert(user);
+        String name = data.get("name");
+        String avatar = data.get("avatar");
+
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         Map<String,String> mp =new HashMap<>();
+        if(userMapper.selectList(queryWrapper.eq("name",name)).isEmpty()) {
+            User user = new User(null,name,avatar);
+            userMapper.insert(user);
+        }
+
         mp.put("结果","成功");
         return mp;
     }

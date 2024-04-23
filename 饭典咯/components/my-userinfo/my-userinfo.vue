@@ -74,32 +74,35 @@
 		    ...mapState(['userInfo']),
 		  },
 		mounted() {
-			uni.request({
-				url:'http://localhost:8080/like/count',
-				method:'GET',
-				data:{username:this.$store.state.userInfo.nickName},
-				success: (res) => {
-					console.log(res);
-					this.sum_like=res.data;
-				},
-				fail() {
-					console.log("fail connect");
-				}
-			}),
-			uni.request({
-				url:'http://localhost:8080/mark/count/',
-				method:'GET',
-				data:{username:this.$store.state.userInfo.nickName},
-				success: (res) => {
-					console.log(res);
-					this.sum_mark=res.data;
-				},
-				fail() {
-					console.log("fail connect");
-				}
-			})
+			this.refreshData();
 		},
 		methods:{
+			refreshData() {
+				uni.request({
+					url:'http://localhost:8080/like/count',
+					method:'GET',
+					data:{username:this.$store.state.userInfo.nickName},
+					success: (res) => {
+						console.log(res);
+						this.sum_like=res.data;
+					},
+					fail() {
+						console.log("fail connect");
+					}
+				}),
+				uni.request({
+					url:'http://localhost:8080/mark/count/',
+					method:'GET',
+					data:{username:this.$store.state.userInfo.nickName},
+					success: (res) => {
+						console.log(res);
+						this.sum_mark=res.data;
+					},
+					fail() {
+						console.log("fail connect");
+					}
+				})
+			},
 			logout() {
 				this.$store.commit('SET_LOGIN_STATUS', false); // 修改登录状态为 true
 				// this.$store.commit('SET_USER_INFO', userInfo.userInfo); // 修改登录状态为 true
