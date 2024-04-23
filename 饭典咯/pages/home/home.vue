@@ -173,9 +173,12 @@ swiper {
 }
 
 .dish-list {
+	display: flex;
+	flex-wrap: wrap;
 }
 .dish-box{
-	height: 350rpx;
+	width: 45%;
+	// margin: 1.5%;
 	background-color: white;
 	margin-top: 20rpx;
 	border-radius: 15rpx;
@@ -197,27 +200,35 @@ swiper {
 }
 .dish-info-box {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+	flex-direction: column;
+	padding: 10rpx;
 }
 .dish-name {
 	font-size: 40rpx;
+	text-align: center;
 }
 .dish-price {
 	font-size: 40rpx;
 	color: orange;
+	text-align: center;
 }
 .dish-shopname{
 	color: gray;
 	text-align: center;
+	margin-right: 1%;
 }
 
 
 .dianpu-list {
 	margin-top: 20rpx;
-	height: 400rpx;
+	// height: 400rpx;
+	display: flex;
+	flex-wrap: wrap;
 }
 .dianpu {
-	height: 100%;
+	// height: 100%;
+	width: 100%;
 	background-color: white;
 	margin-top: 10rpx;
 	border-radius: 15rpx;
@@ -225,7 +236,7 @@ swiper {
 	margin-right: 10rpx;
 }
 .dian-info {
-	height: 20%;
+	// height: 20%;
 	font-size: 48rpx;
 	margin-left: 20rpx;
 	padding-top: 20rpx;
@@ -235,16 +246,24 @@ swiper {
 	display: flex;
 	justify-content: space-around;
 	
-	.dish-img {
-		height: 180rpx;
-		width: 180rpx;
-	}
-	.dish-info-name {
-		text-align: center;
-	}
-	.dish-info-price {
-		text-align: center;
-		color: orange;
+	.dish-info {
+		display: flex;
+		flex-direction: column;
+		align-items: center; /* 垂直居中对齐 */
+		  text-align: center; /* 文字居中对齐 */
+		
+		.dish-img {
+			height: 180rpx;
+			width: 180rpx;
+			justify-content: center;
+		}
+		.dish-info-name {
+			text-align: center;
+		}
+		.dish-info-price {
+			text-align: center;
+			color: orange;
+		}
 	}
 }
 

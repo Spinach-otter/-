@@ -11,7 +11,7 @@
  Target Server Version : 80032
  File Encoding         : 65001
 
- Date: 22/04/2024 15:57:54
+ Date: 23/04/2024 18:21:03
 */
 
 SET NAMES utf8mb4;
@@ -112,7 +112,7 @@ CREATE TABLE `likes` (
   KEY `dishes_id` (`dishes_id`),
   CONSTRAINT `likes_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   CONSTRAINT `likes_ibfk_2` FOREIGN KEY (`dishes_id`) REFERENCES `dishes` (`dishes_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of likes
@@ -127,6 +127,9 @@ INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (9, 1, 12);
 INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (10, 1, 15);
 INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (11, 2, 10);
 INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (12, 2, 12);
+INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (13, 4, 13);
+INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (14, 4, 11);
+INSERT INTO `likes` (`likes_id`, `user_id`, `dishes_id`) VALUES (15, 4, 2);
 COMMIT;
 
 -- ----------------------------
@@ -208,7 +211,7 @@ CREATE TABLE `remarks` (
   KEY `dishes_id` (`dishes_id`),
   CONSTRAINT `remarks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
   CONSTRAINT `remarks_ibfk_2` FOREIGN KEY (`dishes_id`) REFERENCES `dishes` (`dishes_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of remarks
@@ -224,6 +227,8 @@ INSERT INTO `remarks` (`remarks_id`, `user_id`, `dishes_id`, `content`) VALUES (
 INSERT INTO `remarks` (`remarks_id`, `user_id`, `dishes_id`, `content`) VALUES (8, 2, 3, '一般');
 INSERT INTO `remarks` (`remarks_id`, `user_id`, `dishes_id`, `content`) VALUES (9, 3, 1, '1111');
 INSERT INTO `remarks` (`remarks_id`, `user_id`, `dishes_id`, `content`) VALUES (10, 3, 1, '1111');
+INSERT INTO `remarks` (`remarks_id`, `user_id`, `dishes_id`, `content`) VALUES (11, 4, 13, '很正宗的拌饭');
+INSERT INTO `remarks` (`remarks_id`, `user_id`, `dishes_id`, `content`) VALUES (12, 4, 2, '量很大很好吃');
 COMMIT;
 
 -- ----------------------------
@@ -278,7 +283,7 @@ CREATE TABLE `user` (
   `avatar` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Records of user
@@ -287,6 +292,7 @@ BEGIN;
 INSERT INTO `user` (`id`, `name`, `avatar`) VALUES (1, '白白', 'https://pics.craiyon.com/2023-06-09/18da4d7e6e80465ea34ccc36833b926e.webp');
 INSERT INTO `user` (`id`, `name`, `avatar`) VALUES (2, 'duck', 'https://p1.itc.cn/q_70/images03/20230427/97e4cf398c1c453f98f8135b202479d6.jpeg');
 INSERT INTO `user` (`id`, `name`, `avatar`) VALUES (3, '想成为冰冰的菠菜', 'https://thirdwx.qlogo.cn/mmopen/vi_32/2iagtqw7iaHzVuhGmLx7yum9BCx0VBTGcCXREVS7hbCqdqY4ysEgwibZBJ49HiaTcgLZRgiakrR70ZNnCmhkMvT3IhQ/132');
+INSERT INTO `user` (`id`, `name`, `avatar`) VALUES (4, '微信用户ob6fC6_7Qkjrg9bkD-v5ae4wuouM', 'https://thirdwx.qlogo.cn/mmopen/vi_32/POgEwh4mIHO4nibH0KlMECNjjGxQUq24ZEaGT4poC6icRiccVGKSyXwibcPq4BWmiaIGuG1icwxaQX6grC9VemZoJ8rg/132');
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
